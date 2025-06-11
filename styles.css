@@ -6,47 +6,126 @@
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;
     height: 100vh;
-}
-.left-panel {
-    flex: 1 1 40%;
-    background-image: url("./halie-west-25xggax4bSA-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 8px 0px;
-}
-.logo-bar {
-    background-color: rgba(0, 0, 0, 0.521);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30%;
-    height: 70px;
-}
-.odin-img {
-    height: 60px;
-}
-.odin-text {
-    font-family: Odin;
-    font-size: 50px;
-}
-.photo-credit {
-    text-align: center;
-    font-size: 8px;
-    --credit-color: rgba(255, 255, 255, 0.726);
-    color: var(--credit-color);
-    a {
-        color: var(--credit-color);
+    .left-panel {
+        flex: 1 1 40%;
+        background-image: url("./halie-west-25xggax4bSA-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8px 0px;
+
+        .logo-bar {
+            background-color: rgba(0, 0, 0, 0.521);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30%;
+            height: 70px;
+
+            .odin-img {
+                height: 60px;
+            }
+            .odin-text {
+                font-family: Odin;
+                font-size: 50px;
+            }
+        }
+
+        .photo-credit {
+            text-align: center;
+            font-size: 8px;
+            --credit-color: rgba(255, 255, 255, 0.726);
+            color: var(--credit-color);
+            a {
+                color: var(--credit-color);
+            }
+        }
     }
-}
-.right-panel {
-    flex: 1 1 60%;
+    .right-panel {
+        flex: 1 1 60%;
+        display: flex;
+        background-color: rgb(249, 250, 251);
+        flex-direction: column;
+        justify-content: center;
+        --right-panel-padding-left: 24px;
+
+        .top-section {
+            flex: 1 1 33%;
+            padding-top: 60px;
+            padding-left: var(--right-panel-padding-left);
+            p {
+                font-size: 20px;
+                font-weight: 500;
+                max-width: 90%;
+            }
+        }
+
+        .middle-section {
+            flex: 1 1 33%;
+            background-color: white;
+            box-shadow: 0px 5px 8px -5px rgba(0, 0, 0, 0.25);
+            z-index: 10;
+            form {
+                padding-left: var(--right-panel-padding-left);
+                h2 {
+                    font-weight: 500;
+                    max-width: 90%;
+                }
+                .form-row {
+                    display: flex;
+                    margin-bottom: 32px;
+                    /* margin-bottom: 1rem; */
+                    .form-group {
+                        /* flex: 0 1 20%; */
+                        display: flex;
+                        flex-direction: column;
+                        width: 16rem;
+                        margin-right: 48px;
+                        input {
+                            border: 1px solid #e5e7eb;
+                            border-radius: 3px;
+                        }
+                        input:focus {
+                            outline: none;
+                            border-color: blue;
+                            border-radius: 2;
+                            box-shadow: 0px 5px 4px -3px rgba(0, 0, 0, 0.25);
+                        }
+                        input[type="password"]:invalid {
+                            border: 1px solid red;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom-section {
+            flex: 1 1 33%;
+            padding: 32px;
+            padding-left: var(--right-panel-padding-left);
+            button[type="submit"] {
+                color: white;
+                background-color: #596d48;
+                border-radius: 6px;
+                border: 0px;
+                padding: 8px 32px;
+            }
+            p {
+                a {
+                    text-decoration: none;
+                    color: #596d48;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
 }
