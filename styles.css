@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+}
+.left-panel {
+    border: 2px solid black;
+    flex: 1 1 40%;
+}
+.right-panel {
+    border: 2px solid black;
+    flex: 1 1 60%;
+}
