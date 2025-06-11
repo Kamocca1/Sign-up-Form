@@ -1,6 +1,8 @@
 @font-face {
     font-family: Odin;
     src: url(./norse-bold-webfont.woff2), url(./norse-bold-webfont.woff);
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -39,9 +41,10 @@ body {
 .photo-credit {
     text-align: center;
     font-size: 8px;
-    color: rgba(255, 255, 255, 0.726);
+    --credit-color: rgba(255, 255, 255, 0.726);
+    color: var(--credit-color);
     a {
-        color: rgba(255, 255, 255, 0.726);
+        color: var(--credit-color);
     }
 }
 .right-panel {
